@@ -1,7 +1,6 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
   border: 1px solid red;
   padding-inline: 1.5em;
   height: 64px;
@@ -12,8 +11,43 @@
   gap: 1em;
   align-items: center;
 }
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 15.62em;
+  height: 100vh;
+  opacity: 0.5;
+  pointer-events: none;
+  visibility: hidden;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  transition: left 0.3s ease-in-out;
+  z-index: 100;
+}
+.wrapper.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 .nav-list {
-  display: none;
+  margin-inline-start: 1.4em;
+  margin-block-start: 1.5em;
+}
+.nav-item {
+  margin-block-end: 1.8em;
+}
+.nav-link {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.btn {
+  border: none;
+  background-color: transparent;
+}
+.btn.size {
+  margin-inline-start: 2em;
+  margin-block-start: 2em;
 }
 /* profile cart setting */
 .profile-cart {
@@ -27,7 +61,47 @@
   border-radius: 50%;
 }
 @media (min-width: 768px) {
-  .mobile-menu-button {
+  .mobile-menu-button,
+  .btn.size {
+    display: none;
+  }
+  .navbar {
+    padding-block: 2em;
+    height: 7em;
+    padding-inline: 1em;
+  }
+  .brand {
+    gap: 0em;
+  }
+  .wrapper {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    pointer-events: auto;
+  }
+  .profile-cart {
+    gap: 2.6em;
+  }
+  .nav-list {
+    display: flex;
+    gap: 1.25em;
+  }
+  .nav-item {
+    margin-top: 0;
+  }
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .mobile-menu-button,
+  .btn.size {
     display: none;
   }
   .navbar {
@@ -37,6 +111,16 @@
   }
   .brand {
     gap: 3.25em;
+  }
+  .wrapper {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    pointer-events: auto;
   }
   .profile-cart {
     gap: 2.6em;
