@@ -1,7 +1,56 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  margin-top: 100px;
+  border: 1px solid red;
+  padding-inline: 1.5em;
+  height: 64px;
+  /* padding-block: 1.5em; */
 }
 .brand {
   display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.nav-list {
+  display: none;
+}
+/* profile cart setting */
+.profile-cart {
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+}
+.avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .mobile-menu-button {
+    display: none;
+  }
+  .navbar {
+    padding-block: 2em;
+    height: 7em;
+    padding-inline: 7em;
+  }
+  .brand {
+    gap: 3.25em;
+  }
+  .profile-cart {
+    gap: 2.6em;
+  }
+  .nav-list {
+    display: flex;
+    gap: 2.25em;
+  }
+  .nav-item {
+    margin-top: 0;
+  }
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
 }

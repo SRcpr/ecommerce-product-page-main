@@ -18,7 +18,27 @@ const Menubar = () => {
         <ul className="nav-list">
           <li className="nav-item">
             <a className="nav" href="#">
-              Home
+              Collections
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav" href="#">
+              Men
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav" href="#">
+              Women
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav" href="#">
+              About
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav" href="#">
+              Contact
             </a>
           </li>
         </ul>
@@ -28,7 +48,7 @@ const Menubar = () => {
           <img src={cart} alt="" />
         </div>
         <div className="profile">
-          <img src={avatar} alt="" />
+          <img className="avatar" src={avatar} alt="" />
         </div>
       </div>
     </nav>
