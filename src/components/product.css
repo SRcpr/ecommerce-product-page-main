@@ -1,0 +1,10 @@
+.product-cart {
+  display: flex;
+  gap: 1em;
+  border: 1px solid blue;
+}
+.cart-count,
+.cart-button {
+  flex: 1;
+  border: 2px solid green;
+}
