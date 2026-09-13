@@ -1,0 +1,42 @@
+.slider-section {
+  position: relative;
+  background-color: aliceblue;
+}
+.slider-image-box {
+  height: 19em;
+}
+.slider-image {
+  width: 100%;
+  height: 100%;
+}
+.button-control {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1em;
+}
+.btn.circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+@media (min-width: 992px) {
+  .slider-section {
+    border: 2px solid green;
+  }
+  .slider-image-box {
+  }
+  .slider-image.rounded {
+  }
+  .button-control {
+    display: none;
+  }
+  .button-thumbnail-control {
+  }
+  .thumbnail-box {
+  }
+}

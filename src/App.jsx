@@ -1,6 +1,7 @@
 // import viteLogo from "./assets/vite.svg";
 import "./App.css";
 import Menubar from "./components/Menubar";
+import Slider from "./components/Slider";
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
       <header>
         <Menubar />
       </header>
-      <main></main>
+      <main>
+        <Slider />
+      </main>
       <footer></footer>
     </>
   );
