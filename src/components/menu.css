@@ -1,15 +1,16 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
-  padding-inline: 1.5em;
   height: 64px;
-  /* padding-block: 1.5em; */
+  padding-inline: 0.8em;
 }
 .brand {
   display: flex;
   gap: 1em;
   align-items: center;
+}
+.profile {
+  margin-inline-end: 1.3rem; /*This is only for checking purpose*/
 }
 .wrapper {
   position: fixed;
@@ -31,11 +32,11 @@
   pointer-events: auto;
 }
 .nav-list {
-  margin-inline-start: 1.4em;
-  margin-block-start: 1.5em;
+  margin-inline-start: 1.05em;
+  margin-block-start: 3.2em;
 }
 .nav-item {
-  margin-block-end: 1.8em;
+  margin-block-end: 1.6em;
 }
 .nav-link {
   font-weight: 700;
@@ -46,8 +47,8 @@
   background-color: transparent;
 }
 .btn.size {
-  margin-inline-start: 2em;
-  margin-block-start: 2em;
+  margin-inline-start: 1.05em;
+  margin-block-start: 1.5em;
 }
 /* profile cart setting */
 .profile-cart {
@@ -61,17 +62,19 @@
   border-radius: 50%;
 }
 @media (min-width: 768px) {
+  .navbar {
+    padding-block: 2em;
+    height: 7em;
+    padding-inline: 4.8em;
+  }
+  /* =============================== */
   .mobile-menu-button,
   .btn.size {
     display: none;
   }
-  .navbar {
-    padding-block: 2em;
-    height: 7em;
-    padding-inline: 1em;
-  }
+
   .brand {
-    gap: 0em;
+    gap: 3em;
   }
   .wrapper {
     position: static;
@@ -89,6 +92,9 @@
   .nav-list {
     display: flex;
     gap: 1.25em;
+    font-size: 12px;
+    margin-block-start: 1em;
+    margin-inline-start: unset;
   }
   .nav-item {
     margin-top: 0;
@@ -100,34 +106,23 @@
   }
 }
 @media (min-width: 992px) {
+  .navbar {
+    padding-inline: 9.6em;
+  }
+  /* =============================== */
   .mobile-menu-button,
   .btn.size {
     display: none;
   }
-  .navbar {
-    padding-block: 2em;
-    height: 7em;
-    padding-inline: 7em;
-  }
   .brand {
-    gap: 3.25em;
-  }
-  .wrapper {
-    position: static;
-    visibility: visible;
-    opacity: 1;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    box-shadow: none;
-    pointer-events: auto;
+    gap: 3.5em;
   }
   .profile-cart {
-    gap: 2.6em;
+    gap: 3.2em;
   }
   .nav-list {
     display: flex;
-    gap: 2.25em;
+    gap: 2.6em;
   }
   .nav-item {
     margin-top: 0;

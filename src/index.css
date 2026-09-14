@@ -31,3 +31,26 @@
 .hide {
   display: none;
 }
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "YOPQ" 300;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    gap: 6em;
+    flex-direction: row;
+    padding-inline: 9.6em;
+    margin-block-start: 5.6em;
+  }
+  main div {
+    flex: 1;
+  }
+}

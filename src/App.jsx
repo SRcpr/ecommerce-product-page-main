@@ -2,6 +2,7 @@
 import "./App.css";
 import Menubar from "./components/Menubar";
 import Product from "./components/Product";
+import Slider from "./components/Slider";
 
 function App() {
   return (
@@ -10,7 +11,12 @@ function App() {
         <Menubar />
       </header>
       <main>
-        <Product />
+        <div className="mb-2">
+          <Slider />
+        </div>
+        <div>
+          <Product />
+        </div>
       </main>
       <footer></footer>
     </>
