@@ -3,7 +3,9 @@ import cart from "../assets/icon-cart.svg";
 import "./product.css";
 const Product = () => {
   const [count, setCount] = useState(0);
+  const [cart, setCart] = useState(5);
   const handleCount = (countValue) => {
+    console.log(countValue);
     if (countValue === "plus") {
       setCount(count + 1);
     }
@@ -34,27 +36,29 @@ const Product = () => {
           <p>$250.00</p>
         </div>
       </div>
-      <div className="product-cart">
-        <div className="cart-count">
+      <div className="product-add-cart">
+        <div className="count">
           <button
+            className="btn w-100"
             type="button"
-            className="btn text"
             onClick={() => handleCount("minus")}
           >
             -
           </button>
           <span>{count}</span>
           <button
+            className="btn w-100"
             type="button"
-            className="btn text"
             onClick={() => handleCount("plus")}
           >
             +
           </button>
         </div>
-        <div className="cart-button">
-          <img src={cart} alt="" />
-          <span>Add to Cart</span>
+        <div className="add-to-cart">
+          <button className="btn btn-cart" type="button">
+            <img src={cart} alt="" />
+            Add To Cart
+          </button>
         </div>
       </div>
     </section>

@@ -42,15 +42,26 @@ body {
   font-variation-settings: "YOPQ" 300;
   font-weight: 400;
 }
+.border {
+  border: 1px solid red;
+}
 @media (min-width: 768px) {
   main {
     display: flex;
-    gap: 6em;
-    flex-direction: row;
-    padding-inline: 9.6em;
-    margin-block-start: 5.6em;
+    padding-top: 1em;
+    padding-inline: 6em;
+    gap: 2em;
+    margin-block-start: 2.3em;
   }
-  main div {
+  main > div {
+    min-width: 0;
     flex: 1;
+  }
+}
+@media (min-width: 992px) {
+  main {
+    padding-inline: 13em;
+    gap: 7.4em;
+    margin-block-start: 4.6em;
   }
 }

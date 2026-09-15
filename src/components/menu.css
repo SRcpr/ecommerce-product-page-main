@@ -2,16 +2,25 @@
   display: flex;
   justify-content: space-between;
   height: 64px;
-  padding-inline: 0.8em;
+  padding-inline: 1.4em;
+  position: relative;
+}
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: green;
 }
 .brand {
   display: flex;
   gap: 1em;
   align-items: center;
 }
-.profile {
-  margin-inline-end: 1.3rem; /*This is only for checking purpose*/
-}
+
 .wrapper {
   position: fixed;
   left: 0;
@@ -45,6 +54,7 @@
 .btn {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .btn.size {
   margin-inline-start: 1.05em;
@@ -53,29 +63,33 @@
 /* profile cart setting */
 .profile-cart {
   display: flex;
-  gap: 1.2em;
+  justify-content: center;
   align-items: center;
+  gap: 1.2em;
 }
 .avatar {
   width: 25px;
   height: 25px;
   border-radius: 50%;
 }
+.avatar:hover {
+  outline: 2px solid #db7336;
+}
+
+.cart-box,
+.cart-position {
+  display: none;
+}
 @media (min-width: 768px) {
   .navbar {
-    padding-block: 2em;
-    height: 7em;
-    padding-inline: 4.8em;
+    margin-inline: 2em;
+    /* height: 5em; */
   }
-  /* =============================== */
-  .mobile-menu-button,
-  .btn.size {
+  .close-btn,
+  .menu-btn {
     display: none;
   }
 
-  .brand {
-    gap: 3em;
-  }
   .wrapper {
     position: static;
     visibility: visible;
@@ -86,18 +100,29 @@
     box-shadow: none;
     pointer-events: auto;
   }
-  .profile-cart {
-    gap: 2.6em;
-  }
   .nav-list {
     display: flex;
-    gap: 1.25em;
-    font-size: 12px;
-    margin-block-start: 1em;
-    margin-inline-start: unset;
+    font-size: 14px;
+    gap: 2em;
+    margin-left: 4px;
+    margin-top: 0;
   }
   .nav-item {
-    margin-top: 0;
+    position: relative;
+  }
+
+  .nav-link {
+    color: #777a81;
+  }
+
+  .nav-link:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: -28px;
+    background-color: #db7336;
   }
   .avatar {
     width: 50px;
@@ -107,29 +132,21 @@
 }
 @media (min-width: 992px) {
   .navbar {
-    padding-inline: 9.6em;
+    margin-inline: 9em;
+    padding-inline: 0.4em;
+    height: 7em;
   }
-  /* =============================== */
-  .mobile-menu-button,
-  .btn.size {
-    display: none;
-  }
-  .brand {
-    gap: 3.5em;
-  }
-  .profile-cart {
-    gap: 3.2em;
+  .wrapper {
+    margin-inline-start: 2em;
   }
   .nav-list {
-    display: flex;
-    gap: 2.6em;
+    gap: 1.4em;
   }
-  .nav-item {
-    margin-top: 0;
+  .nav-link::after {
+    bottom: -44px;
   }
-  .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+  .profile-cart {
+    margin-inline-end: 1em;
+    gap: 3.1em;
   }
 }

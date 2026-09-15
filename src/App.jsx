@@ -11,10 +11,10 @@ function App() {
         <Menubar />
       </header>
       <main>
-        <div className="mb-2">
+        <div className="border">
           <Slider />
         </div>
-        <div>
+        <div className="border">
           <Product />
         </div>
       </main>
