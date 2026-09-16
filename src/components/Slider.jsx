@@ -58,6 +58,7 @@ const Slider = () => {
         {thumbnail.map((thumbImage, index) => (
           <button
             type="btn"
+            aria-label={thumbImage}
             className="btn thumbnail-box width"
             onClick={() => handleSliderCount(index)}
           >

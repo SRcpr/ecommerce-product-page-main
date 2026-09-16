@@ -28,9 +28,9 @@ const Product = () => {
       </div>
       <div className="product-price-level">
         <div className="current-price">
-          <p>
+          <h2>
             $125.00 <span>50%</span>
-          </p>
+          </h2>
         </div>
         <div className="discount-price">
           <p>$250.00</p>

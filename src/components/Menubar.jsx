@@ -6,19 +6,30 @@ import close from "../assets/icon-close.svg";
 import "./menu.css";
 import { useContext, useState } from "react";
 import { DatabaseContext } from "../context/Database";
+import FilledCheckout from "./FilledCheckout";
 const Menubar = () => {
-  const cartValue = useContext(DatabaseContext);
+  // const cartValue = useContext(DatabaseContext);
+  const cartValue = 1;
+  console.log(cartValue);
   const [isDrawerOpen, SetIsDrawerOpen] = useState(false);
+  const [isCartOpen, SetIsCartOpen] = useState(true);
   const handleDrawerShow = () => {
     SetIsDrawerOpen((prev) => !prev);
   };
-  const handleCart = () => {};
+  const handleCartOpen = () => {
+    SetIsCartOpen((prev) => !prev);
+  };
   return (
     <nav className="navbar">
       <div className="brand">
         <div className="mobile-menu-button">
-          <button className="btn" type="button" onClick={handleDrawerShow}>
-            <img className="menu-btn" src={menu} alt="open menu" />
+          <button
+            className="btn"
+            aria-label="open-menu"
+            type="button"
+            onClick={handleDrawerShow}
+          >
+            <img className="menu-btn" src={menu} alt="" />
           </button>
         </div>
         <div className="mobile-menu-brand">
@@ -29,7 +40,12 @@ const Menubar = () => {
           />
         </div>
         <div className={`wrapper ${isDrawerOpen ? "open" : ""}`}>
-          <button className="btn size" type="button" onClick={handleDrawerShow}>
+          <button
+            className="btn size"
+            aria-label="open-menu"
+            type="button"
+            onClick={handleDrawerShow}
+          >
             <img className="close-btn" src={close} alt="" />
           </button>
           <ul className="nav-list">
@@ -62,18 +78,18 @@ const Menubar = () => {
         </div>
       </div>
       <div className="profile-cart">
-        <button type="button" onClick={handleCart} className="btn cart">
+        <button type="button" onClick={handleCartOpen} className="btn cart">
           <img src={cart} alt="" />
           <span className="cart-position">{cartValue}</span>
         </button>
-        <button type="button" className="btn profile">
+        <button type="button" className="btn profile" aria-label="avatar">
           <img className="avatar" src={avatar} alt="" />
         </button>
       </div>
-      <div className="cart-box">
+      <div className={`cart-box  ${isCartOpen ? "open" : ""}`}>
         <h3>Cart</h3>
         <div className="cart-details">
-          <p>Your cart is empty.</p>
+          {cartValue > 0 ? <FilledCheckout /> : <p>Your cart is empty.</p>}
         </div>
       </div>
     </nav>
