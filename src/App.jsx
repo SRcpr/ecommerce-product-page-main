@@ -18,7 +18,13 @@ function App() {
           <Product />
         </div>
       </main>
-      <footer></footer>
+      <footer className="attribution">
+        Challenge by{" "}
+        <a href="https://www.frontendmentor.io?ref=challenge">
+          Frontend Mentor
+        </a>
+        . Coded by <a href="#">Sunil</a>.
+      </footer>
     </>
   );
 }

@@ -73,7 +73,7 @@ const Product = () => {
             type="button"
             onClick={() => handleAddToCart()}
           >
-            <img src={cart} alt="" />
+            <img src={cart} alt="cart image box" />
             Add To Cart
           </button>
         </div>

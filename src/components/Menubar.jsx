@@ -77,7 +77,12 @@ const Menubar = () => {
         </div>
       </div>
       <div className="profile-cart">
-        <button type="button" onClick={handleCartOpen} className="btn cart">
+        <button
+          type="button"
+          aria-level="filled cart"
+          onClick={handleCartOpen}
+          className="btn cart"
+        >
           <img src={cart} alt="" />
           <span className="cart-position">{cartValue}</span>
         </button>
