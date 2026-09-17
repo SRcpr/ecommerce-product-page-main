@@ -4,10 +4,10 @@
   flex-direction: column;
   padding-inline: 1.5em;
 }
-.product-heading {
-}
+
 .product-heading > small {
   letter-spacing: 1px;
+  color: var(--Dark-grayish-blue);
 }
 .product-heading > h1 {
   font-size: 1.6rem;
@@ -19,6 +19,7 @@
 }
 
 .product-description.text {
+  color: var(--Dark-grayish-blue);
   font-size: 0.8rem;
   letter-spacing: 1px;
   line-height: 24px;
@@ -30,21 +31,24 @@
   align-items: center;
   margin-top: 1.4em;
 }
-.current-price > p {
+.current-price > h2 {
   font-size: 1.9rem;
   font-weight: 700;
+  color: var(--Dark-grayish-blue);
 }
-.current-price > p span {
+.current-price > h2 span {
   font-weight: 400;
-  font-size: 1.1rem;
-  background: black;
-  color: white;
-  border-radius: 4px;
+  font-size: 1rem;
+  background: var(--Very-dark-blue);
+  color: var(--White);
+  border-radius: 8px;
   padding: 4px 8px;
   margin-inline-start: 8px;
 }
 .discount-price > p {
   font-weight: 700;
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
 }
 .product-add-cart {
   display: flex;
@@ -58,13 +62,16 @@
   gap: 1em;
   align-items: center;
   justify-content: space-between;
-  background-color: #f7f8fd;
+  background-color: var(--Light-grayish-blue);
   border-radius: 8px;
 }
 .btn.w-100 {
   padding: 8px 20px;
   font-weight: 700;
   font-size: 1.4rem;
+}
+.btn.btncolor {
+  color: var(--Orange);
 }
 .btn ~ span {
   margin-left: 1px;
@@ -74,7 +81,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ff7d1b;
+  background-color: var(--Orange);
 }
 .add-to-cart:hover {
   cursor: pointer;

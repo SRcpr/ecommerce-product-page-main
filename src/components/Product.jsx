@@ -1,17 +1,30 @@
-import { useState } from "react";
+import { useContext } from "react";
 import cart from "../assets/icon-cart.svg";
 import "./product.css";
+import { DatabaseContext } from "../context/Database";
 const Product = () => {
-  const [count, setCount] = useState(0);
-  const [cart, setCart] = useState(5);
+  const { cartInfo, setCartInfo } = useContext(DatabaseContext);
   const handleCount = (countValue) => {
-    console.log(countValue);
     if (countValue === "plus") {
-      setCount(count + 1);
+      console.log("hi plus");
+      setCartInfo((prev) => ({
+        ...prev,
+        count: prev.count + 1,
+      }));
     }
     if (countValue === "minus") {
-      count > 0 ? setCount(count - 1) : setCount(0);
+      setCartInfo((prev) => ({
+        ...prev,
+        count: prev.count > 0 ? prev.count - 1 : 0,
+      }));
     }
+  };
+  const handleAddToCart = () => {
+    setCartInfo((prev) => ({
+      ...prev,
+      cart: prev.count,
+      cartSum: prev.count,
+    }));
   };
   return (
     <section className="product-section">
@@ -39,15 +52,15 @@ const Product = () => {
       <div className="product-add-cart">
         <div className="count">
           <button
-            className="btn w-100"
+            className="btn w-100 btncolor"
             type="button"
             onClick={() => handleCount("minus")}
           >
             -
           </button>
-          <span>{count}</span>
+          <span>{cartInfo.count}</span>
           <button
-            className="btn w-100"
+            className="btn w-100 btncolor"
             type="button"
             onClick={() => handleCount("plus")}
           >
@@ -55,7 +68,11 @@ const Product = () => {
           </button>
         </div>
         <div className="add-to-cart">
-          <button className="btn btn-cart" type="button">
+          <button
+            className="btn btn-cart"
+            type="button"
+            onClick={() => handleAddToCart()}
+          >
             <img src={cart} alt="" />
             Add To Cart
           </button>

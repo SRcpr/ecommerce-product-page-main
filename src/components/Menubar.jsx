@@ -8,11 +8,10 @@ import { useContext, useState } from "react";
 import { DatabaseContext } from "../context/Database";
 import FilledCheckout from "./FilledCheckout";
 const Menubar = () => {
-  // const cartValue = useContext(DatabaseContext);
-  const cartValue = 1;
-  console.log(cartValue);
+  const { cartInfo } = useContext(DatabaseContext);
+  const cartValue = cartInfo.cart;
   const [isDrawerOpen, SetIsDrawerOpen] = useState(false);
-  const [isCartOpen, SetIsCartOpen] = useState(true);
+  const [isCartOpen, SetIsCartOpen] = useState(false);
   const handleDrawerShow = () => {
     SetIsDrawerOpen((prev) => !prev);
   };

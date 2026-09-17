@@ -21,6 +21,11 @@
 }
 .checkout-info > p {
   line-height: 20px;
+  color: var(--Dark-grayish-blue);
+}
+.checkout-info span {
+  color: var(--Very-dark-blue);
+  font-weight: 700;
 }
 .checkout-image img {
   width: 100%;
