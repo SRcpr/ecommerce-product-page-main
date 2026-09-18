@@ -41,7 +41,7 @@ const Menubar = () => {
         <div className={`wrapper ${isDrawerOpen ? "open" : ""}`}>
           <button
             className="btn size"
-            aria-label="open-menu"
+            aria-label="close-menu"
             type="button"
             onClick={handleDrawerShow}
           >
@@ -79,12 +79,16 @@ const Menubar = () => {
       <div className="profile-cart">
         <button
           type="button"
-          aria-level="filled cart"
+          aria-label="filled cart"
           onClick={handleCartOpen}
           className="btn cart"
         >
           <img src={cart} alt="" />
-          <span className="cart-position">{cartValue}</span>
+          {cartValue > 0 ? (
+            <span className="cart-position">{cartValue}</span>
+          ) : (
+            ""
+          )}
         </button>
         <button type="button" className="btn profile" aria-label="avatar">
           <img className="avatar" src={avatar} alt="" />

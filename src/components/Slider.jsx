@@ -36,12 +36,14 @@ const Slider = () => {
       <div className="button-control">
         <button
           type="button"
+          aria-label="previous image"
           className="btn circle start"
           onClick={() => handleSliderCount("previous")}
         >
           <img src={previous} alt="" />
         </button>
         <button
+          aria-label="next image"
           type="button"
           className="btn circle end"
           onClick={() => handleSliderCount("next")}
@@ -53,14 +55,15 @@ const Slider = () => {
         {sliderImage.map((sliderImg, index) => (
           <button
             key={sliderImg.thumb}
-            type="btn"
-            aria-label={sliderImg.thumb}
+            type="button"
+            aria-label={`show image ${index + 1}`}
+            aria-pressed={index === changeSliderImage}
             className={`btn thumbnail-box width ${index === changeSliderImage ? "active" : ""}`}
             onClick={() => handleSliderCount(index)}
           >
             <img
               src={sliderImg.thumb}
-              alt={`${index === changeSliderImage ? "ok" : "bye"}`}
+              alt={``}
               className={`slider-image rounded`}
             />
           </button>

@@ -47,7 +47,17 @@ body {
 }
 @media (min-width: 768px) {
   main {
+    max-width: 70rem;
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 5vw, 3rem);
+    gap: clamp(2rem, 8vw, 7.5rem);
     display: flex;
+  }
+  .slider-image-box {
+    height: auto;
+    aspect-ratio: 1;
+  }
+  /* main {
     padding-top: 1em;
     padding-inline: 6em;
     gap: 2em;
@@ -56,12 +66,12 @@ body {
   main > div {
     min-width: 0;
     flex: 1;
-  }
+  } */
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   main {
     padding-inline: 13em;
     gap: 7.4em;
     margin-block-start: 4.6em;
   }
-}
+} */
